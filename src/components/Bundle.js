@@ -1,11 +1,11 @@
-import { h, Component } from 'preact';
+import { h, Component } from "preact";
 
 class Bundle extends Component {
   constructor(props) {
     super(props);
     this.state = {
       mod: null
-    }
+    };
   }
 
   componentWillMount() {
@@ -19,12 +19,12 @@ class Bundle extends Component {
   }
 
   load(props) {
-    console.log('Loading');
+    console.log("Loading");
     this.setState({
       mod: null
     });
     props.load(mod => {
-      console.log('Loaded:', mod);
+      console.log("Loaded:", mod);
       this.setState(state => ({
         mod: mod.default ? mod.default : mod
       }));
@@ -36,4 +36,4 @@ class Bundle extends Component {
   }
 }
 
-export default Bundle
+export default Bundle;
