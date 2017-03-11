@@ -1,4 +1,4 @@
-import { h, Component } from "preact";
+import { h, Component } from 'preact';
 
 class Bundle extends Component {
   constructor(props) {
@@ -19,12 +19,12 @@ class Bundle extends Component {
   }
 
   load(props) {
-    console.log("Loading");
+    console.log('Loading');
     this.setState({
       mod: null
     });
     props.load(mod => {
-      console.log("Loaded:", mod);
+      console.log('Loaded:', mod);
       this.setState(state => ({
         mod: mod.default ? mod.default : mod
       }));

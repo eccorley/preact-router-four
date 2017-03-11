@@ -1,17 +1,17 @@
-import { h } from "preact";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Bundle from "./Bundle";
+import { h } from 'preact';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Bundle from './Bundle';
 
 const Loading = () => <div>Loading...</div>;
 
 const routes = [
   {
-    path: "/nice",
-    load: require("bundle-loader?lazy!./CompTwo")
+    path: '/nice',
+    load: require('bundle-loader?lazy!./CompTwo')
   },
   {
-    path: "/alright",
-    load: require("bundle-loader?lazy!./CompTwo")
+    path: '/alright',
+    load: require('bundle-loader?lazy!./CompTwo')
   }
 ];
 
@@ -43,7 +43,7 @@ export default props => (
       <Route
         path="/cool"
         render={({ match }) => (
-          <Bundle load={require("bundle-loader?lazy!./CompTwo")}>
+          <Bundle load={require('bundle-loader?lazy!./CompTwo')}>
             {Comp => Comp ? <Comp /> : <Loading />}
           </Bundle>
         )}

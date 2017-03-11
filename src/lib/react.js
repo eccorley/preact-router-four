@@ -1,5 +1,5 @@
-import { h as createElement, Component, options } from "preact";
-import PropTypes from "proptypes";
+import { h as createElement, Component, options } from 'preact';
+import PropTypes from 'proptypes';
 
 let old = options.vnode;
 options.vnode = vnode => {
